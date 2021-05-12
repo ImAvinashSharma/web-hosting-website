@@ -65,7 +65,7 @@ img {
 }
 
 .showcase h1 {
-  font-size: 33px;
+  font-size: 40px;
 }
 
 .showcase p {
@@ -74,10 +74,12 @@ img {
 
 .showcase .grid {
   overflow: visible;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 55% auto;
   gap: 30px;
 }
-
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
 .showcase-form {
   position: relative;
   top: 60px;
@@ -86,6 +88,7 @@ img {
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
 }
 
 .showcase-form .form-control {
@@ -122,4 +125,28 @@ img {
 
 .stats {
   padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in;
 }
+.stats-heading {
+  min-width: 500px;
+  margin: auto;
+}
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
